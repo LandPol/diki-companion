@@ -1,0 +1,28 @@
+/* ==============================
+   Diki Advertisements
+   ============================== */
+
+/* SalesManago Banner */
+html.diki-ads-blocked .salesManagoEntryBanner {
+    display: none !important;
+}
+
+/* "Diki Recommends" Promotional Section */
+html.diki-ads-blocked .dikiTilesSection {
+    display: none !important;
+}
+
+/* Individual SalesManago Tiles */
+html.diki-ads-blocked [id^="smb_"] {
+    display: none !important;
+}
+
+/* Promotional Pop-up Banners */
+html.diki-ads-blocked .flippingPopupWrap:has(.flippingPromoPopup) {
+    display: none !important;
+}
+
+/* Premium Promotional Banner */
+html.diki-ads-blocked #premium-halloween-2026 {
+    display: none !important;
+}

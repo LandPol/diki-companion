@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Diki Companion</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="app-container">
+
+        <header class="header">
+
+            <div class="logo-wrapper">
+                <img
+                    src="../logo/diki_logo.svg"
+                    alt="Diki"
+                    class="logo"
+                >
+            </div>
+
+            <h1 id="appTitle">
+                Diki Companion
+            </h1>
+
+            <p
+                class="subtitle"
+                id="appSubtitle"
+            >
+                Your Diki learning companion
+            </p>
+
+        </header>
+
+        <div class="control-panel">
+
+            <div class="theme-status">
+                <span
+                    class="status-label"
+                    id="statusLabel"
+                >
+                    Dark mode:
+                </span>
+
+                <span
+                    id="status"
+                    class="status-text"
+                >
+                    Disabled
+                </span>
+            </div>
+
+            <label class="switch">
+                <input
+                    type="checkbox"
+                    id="darkMode"
+                >
+
+                <span class="slider"></span>
+            </label>
+
+        </div>
+
+        <div class="control-panel">
+
+            <div class="theme-status">
+                <span
+                    class="status-label"
+                    id="adsStatusLabel"
+                >
+                    Block ads:
+                </span>
+
+                <span
+                    class="status-text"
+                    id="adsStatus"
+                >
+                    Disabled
+                </span>
+            </div>
+
+            <label class="switch">
+                <input
+                    type="checkbox"
+                    id="blockAds"
+                >
+
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="language-setting">
+
+            <div
+                class="language-title"
+                id="languageTitle"
+            >
+                Language
+            </div>
+
+            <label class="language-option">
+
+                <input
+                    type="radio"
+                    name="language"
+                    value="en"
+                    id="languageEnglish"
+                    checked
+                >
+
+                <span id="languageEnglishLabel">
+                    English
+                </span>
+
+            </label>
+
+            <label class="language-option">
+
+                <input
+                    type="radio"
+                    name="language"
+                    value="pl"
+                    id="languagePolish"
+                >
+
+                <span id="languagePolishLabel">
+                    Polish
+                </span>
+
+            </label>
+
+        </div>
+
+        <section class="vocabulary-section">
+
+            <div class="vocabulary-header">
+
+                <span
+                    class="vocabulary-title"
+                    id="vocabularyTitle"
+                >
+                    My vocabulary
+                </span>
+
+                <span
+                    id="wordCount"
+                    class="word-count"
+                >
+                    0
+                </span>
+
+            </div>
+
+            <div class="search-container">
+
+                <input
+                    type="text"
+                    id="searchWords"
+                    class="search-input"
+                    placeholder="Search vocabulary..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+            <button
+                id="addWord"
+                class="export-button"
+            >
+                + Add word
+            </button>
+
+            <div
+                id="wordsList"
+                class="words-list"
+            >
+
+                <div
+                    class="empty-state"
+                    id="emptyWordsState"
+                >
+                    No saved words
+                </div>
+
+            </div>
+
+            <button
+                id="clearWords"
+                class="clear-button"
+            >
+                Clear database
+            </button>
+
+            <button
+                id="exportCsv"
+                class="export-button"
+            >
+                Export CSV
+            </button>
+
+            <button
+                id="exportAnki"
+                class="export-button"
+            >
+                Export to Anki
+            </button>
+
+            <button
+                id="exportTxt"
+                class="export-button"
+            >
+                Export TXT
+            </button>
+
+            <button
+                id="exportBackup"
+                class="export-button"
+            >
+                Export database
+            </button>
+
+            <button
+                id="importBackup"
+                class="export-button"
+            >
+                Import database
+            </button>
+
+        </section>
+
+    </div>
+
+    <script src="../libraries/sql-wasm.js"></script>
+    <script src="../libraries/jszip.min.js"></script>
+    <script src="../libraries/FileSaver.min.js"></script>
+    <script src="../libraries/genanki.js"></script>
+
+    <script src="popup.js"></script>
+</body>
+</html>
