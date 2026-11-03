@@ -26,3 +26,8 @@ html.diki-ads-blocked .flippingPopupWrap:has(.flippingPromoPopup) {
 html.diki-ads-blocked #premium-halloween-2026 {
     display: none !important;
 }
+
+/* Basic Subscription Promotional Banner */
+html.diki-ads-blocked #basic-autumn-2026 {
+    display: none !important;
+}
