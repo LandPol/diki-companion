@@ -31,3 +31,8 @@ html.diki-ads-blocked #premium-halloween-2026 {
 html.diki-ads-blocked #basic-autumn-2026 {
     display: none !important;
 }
+
+/* Black Weeks Promotional Banner */
+html.diki-ads-blocked #black_weeks_2026 {
+    display: none !important;
+}
